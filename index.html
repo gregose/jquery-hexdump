@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>JQuery Hexdump Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="jquery.hexdump.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.hexdump.css">
+
+    <script>
+      $(document).ready(function(){
+        var buffer = new Array();
+        for(var i = 0; i < 1028*4; i++) {
+          buffer[i] = Math.floor(Math.random()*255);
+        }
+        $('#content').hexDump(buffer);
+      });
+    </script>
+
+    <style>
+      #content {
+        width: 470px;
+      }
+    </style>
+  </head>
+
+  <body>
+    Hex test
+    <div id="content"></div>
+  </body>
+
+</html>
